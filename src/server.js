@@ -6,6 +6,7 @@ const app = express();
 const upload = multer({ dest: 'uploads/' });
 const RTMP_SERVER_URL = 'rtmp://your-rtmp-server/live/stream-key';
 app.post('/upload', upload.single('video'), (req, res) => {
+    console.log("chunk received");
     const videoPath = req.file.path;
 // Stream the video to the RTMP server using FFmpeg
     ffmpeg(videoPath)

@@ -37,7 +37,7 @@ const uploadStream = multer({ storage: multer.memoryStorage() }); // Store in me
 const allowedMimeTypes = ['video/webm'];
 
 const CLOUDFLARE_RTMP_URL = "rtmps://live.cloudflare.com:443/live/";
-const STREAM_KEY = "12f27d700610b9030f1f4936a44c4382kbe236c6a26701bcfdc746c247251214c";  // Get this from your Cloudflare Stream dashboard
+const STREAM_KEY = "";  // Get this from your Cloudflare Stream dashboard
 
 app.post("/upload2", upload.single("video"), (req, res) => {
     if (!req.file) {
